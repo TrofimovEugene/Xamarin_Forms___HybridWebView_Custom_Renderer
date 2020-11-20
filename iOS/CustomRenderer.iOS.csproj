@@ -115,7 +115,11 @@
     <ITunesArtwork Include="ITunesArtwork%402x" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidAsset Include="Content\Blender ( Modifier Applied Low Poly ).glb" />
+    <AndroidAsset Include="Content\bundle.js" />
+    <AndroidAsset Include="Content\untitled.glb" />
+  </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup />
   </Target>

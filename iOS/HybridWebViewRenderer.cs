@@ -35,7 +35,7 @@ namespace CustomRenderer.iOS
                 userController.RemoveAllUserScripts();
                 userController.RemoveScriptMessageHandler("invokeAction");
                 HybridWebView hybridWebView = e.OldElement as HybridWebView;
-                hybridWebView.Cleanup();
+                hybridWebView?.Cleanup();
             }
 
             if (e.NewElement != null)
