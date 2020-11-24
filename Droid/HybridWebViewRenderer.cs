@@ -1,5 +1,5 @@
 ﻿using Android.Content;
-using Android.Webkit;
+using Android.Content.PM;
 using CustomRenderer;
 using CustomRenderer.Droid;
 using Xamarin.Forms;
@@ -11,7 +11,7 @@ namespace CustomRenderer.Droid
 {
     public class HybridWebViewRenderer : WebViewRenderer
     {
-        Context _context;
+        private Context _context;
 
         public HybridWebViewRenderer(Context context) : base(context)
         {
@@ -24,14 +24,20 @@ namespace CustomRenderer.Droid
 
             if (e.NewElement != null)
             {
-                Control.SetWebChromeClient(new WebChromeClient());
                 if (Control.Settings != null)
                 {
                     Control.Settings.JavaScriptEnabled = true;
                     Control.Settings.AllowUniversalAccessFromFileURLs = true;
                     Control.Settings.DomStorageEnabled = true;
+                    System.Diagnostics.Debug.WriteLine($"UserAgentString: {Control.Settings.UserAgentString}");
                 }
+                Control.SetWebChromeClient(new FormsWebChromeClient());
                 Control.LoadUrl($"file:///android_asset/Content/{((HybridWebView)Element).Uri}");
+                var pi = _context.PackageManager?.GetPackageInfo("com.google.android.webview", PackageInfoFlags.Activities);
+                if (pi == null) 
+                    return;
+                System.Diagnostics.Debug.WriteLine($"Version name: {pi.VersionName}");
+                System.Diagnostics.Debug.WriteLine($"Version code: {pi.VersionCode}");
             }
         }
     }

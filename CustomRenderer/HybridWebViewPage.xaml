@@ -4,6 +4,5 @@
              xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
              x:Class="CustomRenderer.HybridWebViewPage"
              Padding="0,40,0,0">
-    <local:HybridWebView x:Name="hybridWebView"
-                         Uri="index.html" />
+    <local:HybridWebView Uri="index.html" />
 </ContentPage>
