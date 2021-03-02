@@ -63,6 +63,8 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\Blender %28 Modifier Applied Low Poly %29.glb" />
     <AndroidAsset Include="Assets\Content\bundle.js" />
+    <AndroidAsset Include="Assets\Content\module.js" />
+    <AndroidAsset Include="Assets\Content\module1.js" />
     <AndroidAsset Include="Assets\Content\untitled.glb" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -84,4 +86,9 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
