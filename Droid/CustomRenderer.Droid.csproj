@@ -63,6 +63,10 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\Blender %28 Modifier Applied Low Poly %29.glb" />
     <AndroidAsset Include="Assets\Content\bundle.js" />
+    <AndroidAsset Include="Assets\Content\concrete.jpg" />
+    <AndroidAsset Include="Assets\Content\dat.gui.module.js" />
+    <AndroidAsset Include="Assets\Content\garage.glb" />
+    <AndroidAsset Include="Assets\Content\garage.js" />
     <AndroidAsset Include="Assets\Content\module.js" />
     <AndroidAsset Include="Assets\Content\module1.js" />
     <AndroidAsset Include="Assets\Content\untitled.glb" />
